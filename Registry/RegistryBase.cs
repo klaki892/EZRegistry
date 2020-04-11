@@ -21,7 +21,6 @@ namespace Registry
 
         public RegistryBase(byte[] rawBytes, string hivePath)
         {
-            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             FileBytes = rawBytes;
             HivePath = "None";
 
@@ -41,7 +40,6 @@ namespace Registry
 
         public RegistryBase(string hivePath)
         {
-            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             if (hivePath == null)
             {
                 throw new ArgumentNullException("hivePath cannot be null");
